@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+  <title>Index of /pathogen/Antimicrobial_resistance/AMRFinderPlus/database/latest</title>
+ </head>
+ <body>
+<h1>Index of /pathogen/Antimicrobial_resistance/AMRFinderPlus/database/latest</h1>
+<pre>Name                                                       Last modified      Size  <hr><a href="/pathogen/Antimicrobial_resistance/AMRFinderPlus/database/">Parent Directory</a>                                                                -   
+<a href="allele_counts_by_year/">allele_counts_by_year/</a>                                     2023-11-16 11:08    -   
+<a href="AMR.LIB">AMR.LIB</a>                                                    2023-11-16 11:08   95M  
+<a href="AMRProt">AMRProt</a>                                                    2023-11-16 11:08  3.7M  
+<a href="AMRProt-mutation.tab">AMRProt-mutation.tab</a>                                       2023-11-16 11:08  135K  
+<a href="AMRProt-suppress">AMRProt-suppress</a>                                           2023-11-16 11:08  608   
+<a href="AMRProt-susceptible.tab">AMRProt-susceptible.tab</a>                                    2023-11-16 11:08  3.7K  
+<a href="AMR_CDS">AMR_CDS</a>                                                    2023-11-16 11:08  8.6M  
+<a href="AMR_DNA-Acinetobacter_baumannii">AMR_DNA-Acinetobacter_baumannii</a>                            2023-11-16 11:08  306   
+<a href="AMR_DNA-Acinetobacter_baumannii.tab">AMR_DNA-Acinetobacter_baumannii.tab</a>                        2023-11-16 11:08  442   
+<a href="AMR_DNA-Campylobacter">AMR_DNA-Campylobacter</a>                                      2023-11-16 11:08  5.9K  
+<a href="AMR_DNA-Campylobacter.tab">AMR_DNA-Campylobacter.tab</a>                                  2023-11-16 11:08  1.3K  
+<a href="AMR_DNA-Clostridioides_difficile">AMR_DNA-Clostridioides_difficile</a>                           2023-11-16 11:08  2.9K  
+<a href="AMR_DNA-Clostridioides_difficile.tab">AMR_DNA-Clostridioides_difficile.tab</a>                       2023-11-16 11:08  295   
+<a href="AMR_DNA-Enterococcus_faecalis">AMR_DNA-Enterococcus_faecalis</a>                              2023-11-16 11:08  2.9K  
+<a href="AMR_DNA-Enterococcus_faecalis.tab">AMR_DNA-Enterococcus_faecalis.tab</a>                          2023-11-16 11:08  390   
+<a href="AMR_DNA-Enterococcus_faecium">AMR_DNA-Enterococcus_faecium</a>                               2023-11-16 11:08  2.9K  
+<a href="AMR_DNA-Enterococcus_faecium.tab">AMR_DNA-Enterococcus_faecium.tab</a>                           2023-11-16 11:08  388   
+<a href="AMR_DNA-Escherichia">AMR_DNA-Escherichia</a>                                        2023-11-16 11:08  7.6K  
+<a href="AMR_DNA-Escherichia.tab">AMR_DNA-Escherichia.tab</a>                                    2023-11-16 11:08  7.5K  
+<a href="AMR_DNA-Klebsiella_oxytoca">AMR_DNA-Klebsiella_oxytoca</a>                                 2023-11-16 11:08  166   
+<a href="AMR_DNA-Klebsiella_oxytoca.tab">AMR_DNA-Klebsiella_oxytoca.tab</a>                             2023-11-16 11:08  726   
+<a href="AMR_DNA-Neisseria_gonorrhoeae">AMR_DNA-Neisseria_gonorrhoeae</a>                              2023-11-16 11:08  5.9K  
+<a href="AMR_DNA-Neisseria_gonorrhoeae.tab">AMR_DNA-Neisseria_gonorrhoeae.tab</a>                          2023-11-16 11:08  2.2K  
+<a href="AMR_DNA-Salmonella">AMR_DNA-Salmonella</a>                                         2023-11-16 11:08  1.6K  
+<a href="AMR_DNA-Salmonella.tab">AMR_DNA-Salmonella.tab</a>                                     2023-11-16 11:08  406   
+<a href="AMR_DNA-Staphylococcus_aureus">AMR_DNA-Staphylococcus_aureus</a>                              2023-11-16 11:08  3.3K  
+<a href="AMR_DNA-Staphylococcus_aureus.tab">AMR_DNA-Staphylococcus_aureus.tab</a>                          2023-11-16 11:08  1.7K  
+<a href="AMR_DNA-Streptococcus_pneumoniae">AMR_DNA-Streptococcus_pneumoniae</a>                           2023-11-16 11:08  2.9K  
+<a href="AMR_DNA-Streptococcus_pneumoniae.tab">AMR_DNA-Streptococcus_pneumoniae.tab</a>                       2023-11-16 11:08  825   
+<a href="ReferenceGeneCatalog.txt">ReferenceGeneCatalog.txt</a>                                   2023-11-16 11:08  1.8M  
+<a href="ReferenceGeneHierarchy.txt">ReferenceGeneHierarchy.txt</a>                                 2023-11-16 11:08  1.0M  
+<a href="amr_targets.fa">amr_targets.fa</a>                                             2023-11-16 11:08  1.5M  
+<a href="changelog.txt">changelog.txt</a>                                              2023-11-16 13:14  1.4M  
+<a href="changes.txt">changes.txt</a>                                                2023-11-16 13:14  1.4M  
+<a href="database_format_version.txt">database_format_version.txt</a>                                2023-11-16 11:08    7   
+<a href="fam.tab">fam.tab</a>                                                    2023-11-16 11:08  292K  
+<a href="taxgroup.tab">taxgroup.tab</a>                                               2023-11-16 11:08  1.2K  
+<a href="version.txt">version.txt</a>                                                2023-11-16 11:08   13   
+<hr></pre>
+<a href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html">HHS Vulnerability Disclosure</a>
