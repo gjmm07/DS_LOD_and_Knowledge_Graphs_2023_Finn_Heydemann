@@ -1,0 +1,11 @@
+allele,gene_family,whitelisted_taxa,product_name,scope,type,subtype,class,subclass,refseq_protein_accession,refseq_nucleotide_accession,curated_refseq_start,genbank_protein_accession,genbank_nucleotide_accession,genbank_strand,genbank_start,genbank_stop,refseq_strand,refseq_start,refseq_stop,pubmed_reference,blacklisted_taxa,synonyms,hierarchy_node,db_version
+gyrA_S83R,gyrA,Enterococcus_faecalis,DNA gyrase subunit A GyrA,core,AMR,POINT,QUINOLONE,QUINOLONE,WP_033785346.1,,No,ETU44550.1,JAHX01000001.1,+,6675,9176,,,,,,,,2023-11-15.1
+,ant(2'')-Ia,,aminoglycoside nucleotidyltransferase ANT(2'')-Ia,core,AMR,AMR,AMINOGLYCOSIDE,GENTAMICIN/KANAMYCIN/TOBRAMYCIN,WP_000381803.1,NG_052432.1,No,ABA08385.1,DQ176450.1,+,1442,1975,+,101.0,634.0,,,aadB,ant(2'')-Ia,2023-11-15.1
+blaADC-135,blaADC,,extended-spectrum class C beta-lactamase ADC-135,core,AMR,AMR,BETA-LACTAM,CEPHALOSPORIN,WP_004790939.1,NG_064691.1,No,ENV03983.1,APPF01000018.1,-,180244,181395,+,101.0,1252.0,,,,blaADC-135,2023-11-15.1
+blaCMY-20,blaCMY,,class C beta-lactamase CMY-20,core,AMR,AMR,BETA-LACTAM,CEPHALOSPORIN,WP_063859827.1,NG_048815.1,No,AAX58682.2,AY960293.2,+,1,1143,+,1.0,1143.0,18207348,,,blaCMY-20,2023-11-15.1
+,fedA,,F18 fimbrial major subunit FedA,plus,VIRULENCE,VIRULENCE,,,,,No,AAS76847.1,AY569976.1,+,1,516,,,,,,,fedA,2023-11-15.1
+ftsI_V471G,ftsI,Pseudomonas_aeruginosa,penicillin-binding protein PBP3 FtsI,core,AMR,POINT,BETA-LACTAM,CARBAPENEM,WP_003094139.1,NC_002516.2,No,AAG07806.1,AE004091.2,-,4952604,4954343,-,4952604.0,4954343.0,31570397,,,,2023-11-15.1
+tufA_Q330H,tufA,Escherichia,translation elongation factor EF-Tu 1,core,AMR,POINT,POLYKETIDE,KIRROMYCIN,WP_000031783.1,NC_000913.3,No,AAC76364.1,U00096.3,-,3470145,3471329,-,3470145.0,3471329.0,,,,,2023-11-15.1
+,srpS,,solvent efflux transporter transcriptional repressor SrpS,plus,STRESS,BIOCIDE,EFFLUX,EFFLUX,,,No,AAK69562.1,HM626202.1,-,88331,89110,,,,,,,srpS,2023-11-15.1
+blaOXA-335,blaOXA,,OXA-134 family carbapenem-hydrolyzing class D beta-lactamase OXA-335,core,AMR,AMR,BETA-LACTAM,CARBAPENEM,WP_063862702.1,NG_049627.1,No,AGW16417.1,KF203109.1,+,1,822,+,1.0,822.0,24288029,,,blaOXA-335,2023-11-15.1
+,oqxB,,multidrug efflux RND transporter permease subunit OqxB,core,AMR,AMR,PHENICOL/QUINOLONE,PHENICOL/QUINOLONE,WP_000347934.1,NG_048025.1,No,AAP43110.2,EU370913.1,+,47851,51003,+,101.0,3253.0,19528276,,,oqxB,2023-11-15.1
