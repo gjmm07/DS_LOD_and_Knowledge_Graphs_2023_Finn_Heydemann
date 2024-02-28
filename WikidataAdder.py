@@ -200,9 +200,18 @@ class GeneWikidataAdder:
         # Property P351
         pass
 
-    def encodes_protein(self):
+    def encodes_protein(self, wd_gene_id: str):
         # Encodes a protein -- protein is only present in next step
-        pass
+        if "wd_protein_id" in self.df_row.keys():
+            if not self.sim:
+                gene_page = pywikibot.ItemPage(repo, wd_gene_id)
+                _add_claim(gene_page,
+                           u"P688",
+                           self.df_row["wd_protein_id"],
+                           "add encodes protein")
+            else:
+                print(wd_gene_id)
+                print("encodes (P688): {}".format(self.df_row["wd_protein_id"]))
 
 
 class ProteinWikidataAdder:
@@ -228,34 +237,67 @@ class ProteinWikidataAdder:
             elif not results:
                 self.protein_page = pywikibot.ItemPage(site)
                 self.protein_page.editLabels({"en": self.df_row["product_name"]}, summary="Setting new label")
-            _edit_description(self.gene_page, f"microbial protein found in {strain}")
+            _edit_description(self.protein_page, f"microbial protein found in {strain}")
             # _edit_aliases(self.gene_page, [self.df_row["genbank_organism2"].split()[-1]])
-            print(self.gene_page.getID())
+            print(self.protein_page.getID())
 
-    def instance_of(self):
+    def add_instance_of(self):
         if not self.sim:
-            pass
+            _add_claim(self.protein_page,
+                       u"P31",
+                       u"Q8054",
+                       "add instance of protein")
         else:
             print("Instance of (P31) Protein (Q8054)")
 
-    def subclass_of(self):
+    def add_subclass_of(self):
         if not self.sim:
-            pass
+            _add_claim(self.protein_page,
+                       u"P279",
+                       u"Q8054",
+                       "add subclass of protein")
         else:
             print("Subclass of (P279) Protein (Q8054)")
 
-    def found_in_taxon(self):
-        pass
+    def add_found_in_taxon(self):
+        if not self.sim:
+            _add_claim(self.protein_page,
+                       u"P703",
+                       self.df_row["strain_wd_id"],
+                       "add found in taxon")
+        else:
+            print("found in taxon {}".format(self.df_row["strain_wd_id"]))
 
-    def encoded_by(self):
-        pass
+    def add_encoded_by(self):
+        if not self.sim:
+            _add_claim(self.protein_page,
+                       u"P702",
+                       self.df_row["wd_gene_id"],
+                       "add encoded by")
+        else:
+            print("encoded by " + self.df_row["wd_gene_id"])
 
     def add_identifier(self):
-        pass
+        if not self.sim:
+            _add_identifier(self.protein_page,
+                            u"P637",
+                            self.df_row["refseq_protein_accession"],
+                            "add refseq protein id")
+        else:
+            print("RefSeq protein ID (P637): {}".format(self.df_row["refseq_protein_accession"]))
 
     def add_antibiotic_resistance(self):
-        pass
+        if not self.sim:
+            _add_claim(self.protein_page,
+                       u"P682",
+                       u"Q14818070",
+                       "add antibiotic resistance")
+        else:
+            print("biological process (P682): responds to antibiotic (Q14818070)")
 
+
+if __name__ == "__main__":
+    search_for_exist("aminoglycoside N-acetyltransferase AAC(2')-I(A267)")
 
 
 
