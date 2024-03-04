@@ -1,7 +1,9 @@
+import time
+import urllib
 import pywikibot
 from SPARQLWrapper import SPARQLWrapper, JSON
 import pandas as pd
-from typing import Optional
+from typing import Optional, Literal
 
 
 sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
@@ -15,7 +17,14 @@ def search_for_exist(wd_key: str):
                     """
     sparql.setQuery(query)
     sparql.setReturnFormat(JSON)
-    results = sparql.query().convert().get("results").get("bindings")
+    while True:
+        try:
+            results = sparql.query().convert().get("results").get("bindings")
+            break
+        except (urllib.error.HTTPError, urllib.request.HTTPError):
+            time.sleep(5)
+        except:
+            pass
     print(results)
     return results
 
@@ -50,7 +59,7 @@ def _add_identifier(page: pywikibot.ItemPage, p_id: str, identifier, summary: Op
 
 
 def _edit_description(page: pywikibot.ItemPage, description: str):
-    if len(page.descriptions):
+    if len(page.descriptions) and "en" in page.descriptions.keys():
         if page.descriptions["en"] == description:
             print("description already exists")
             return
@@ -58,7 +67,7 @@ def _edit_description(page: pywikibot.ItemPage, description: str):
 
 
 def _edit_aliases(page: pywikibot.ItemPage, aliases: list[str]):
-    if len(page.aliases):
+    if len(page.aliases) and "en" in page.aliases.keys():
         if aliases[0] in page.aliases["en"]:
             print("alias already exists")
             return
@@ -72,25 +81,30 @@ class StrainWikidataAdder:
         self.strain_page: pywikibot.ItemPage | None = None
         self.sim = sim  # for debugging purposes
 
-    def create_strain(self):
+    def create_strain(self) -> int:
         if self.sim:
             print("Label: " + self.df_row["genbank_organism2"])
             print("Description: " + "bacterial strain")
             print("Alias: " + self.df_row["genbank_organism2"].split()[-1])
+            return 0
         else:
             results = search_for_exist(self.df_row["genbank_organism2"])
+            created: int = 0
             if len(results) >= 2:
                 print("more than one item found")
                 self.sim = True
-                return
+                return 0
             elif len(results) == 1:
                 self.strain_page = pywikibot.ItemPage(repo, results[0].get("item").get("value").split("/")[-1])
+                created = 1
             elif not results:
                 self.strain_page = pywikibot.ItemPage(site)
                 self.strain_page.editLabels({"en": self.df_row["genbank_organism2"]}, summary="Setting new label")
+                created = 2
             _edit_description(self.strain_page, "bacterial strain")
             _edit_aliases(self.strain_page, [self.df_row["genbank_organism2"].split()[-1]])
             print(self.strain_page.getID())
+            return created
 
     def add_instance_of_strain(self):
         if not self.sim:
@@ -147,7 +161,7 @@ class GeneWikidataAdder:
             if len(results) >= 2:
                 print("more than one item found")
                 self.sim = True
-                return
+                return False
             elif len(results) == 1:
                 self.gene_page = pywikibot.ItemPage(repo, results[0].get("item").get("value").split("/")[-1])
             elif not results:
@@ -156,6 +170,7 @@ class GeneWikidataAdder:
             _edit_description(self.gene_page, f"microbial gene found in {strain}")
             # _edit_aliases(self.gene_page, [self.df_row["genbank_organism2"].split()[-1]])
             print(self.gene_page.getID())
+        return True
 
     def add_instance_of_gene(self):
         if not self.sim:
@@ -221,25 +236,30 @@ class ProteinWikidataAdder:
         self.sim = sim
         self.protein_page: pywikibot.ItemPage | None = None
 
-    def create_protein(self):
+    def create_protein(self) -> int:
         strain = self.df_row["genbank_organism2"]
         if self.sim:
             print("Label: " + self.df_row["product_name"])
             print("Desciption: " + f"microbial protein found in {strain}")
+            return 0
         else:
             results = search_for_exist(self.df_row["product_name"])
+            created: int = 0
             if len(results) >= 2:
                 print("more than one item found")
                 self.sim = True
-                return
+                return 0
             elif len(results) == 1:
                 self.protein_page = pywikibot.ItemPage(repo, results[0].get("item").get("value").split("/")[-1])
+                created = 1
             elif not results:
                 self.protein_page = pywikibot.ItemPage(site)
                 self.protein_page.editLabels({"en": self.df_row["product_name"]}, summary="Setting new label")
+                created = 2
             _edit_description(self.protein_page, f"microbial protein found in {strain}")
             # _edit_aliases(self.gene_page, [self.df_row["genbank_organism2"].split()[-1]])
             print(self.protein_page.getID())
+            return created
 
     def add_instance_of(self):
         if not self.sim:
@@ -297,7 +317,7 @@ class ProteinWikidataAdder:
 
 
 if __name__ == "__main__":
-    search_for_exist("aminoglycoside N-acetyltransferase AAC(2')-I(A267)")
+    search_for_exist("Acinetobacter beijerinckii CIP 110307")
 
 
 
