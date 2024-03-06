@@ -1,0 +1,14 @@
+#LWP-Cookies-2.0
+Set-Cookie3: GeoIP="DE:NW:Cologne:50.95:6.91:v4"; path="/"; domain=".wikidata.org"; path_spec; domain_dot; secure; discard; version=0
+Set-Cookie3: WMF-Last-Access-Global="06-Mar-2024"; path="/"; domain=".wikidata.org"; path_spec; domain_dot; secure; expires="2024-04-07 12:00:00Z"; HttpOnly=None; version=0
+Set-Cookie3: NetworkProbeLimit="0.001"; path="/"; domain="www.wikidata.org"; path_spec; secure; expires="2024-03-06 18:42:41Z"; version=0
+Set-Cookie3: UseDC=master; path="/"; domain="www.wikidata.org"; path_spec; secure; expires="2024-03-06 17:42:51Z"; HttpOnly=None; version=0
+Set-Cookie3: WMF-Last-Access="06-Mar-2024"; path="/"; domain="www.wikidata.org"; path_spec; secure; expires="2024-04-07 12:00:00Z"; HttpOnly=None; version=0
+Set-Cookie3: centralauth_Session=1b8c3db42de8ee4b086d324b1adba9a3; path="/"; domain="www.wikidata.org"; path_spec; secure; discard; HttpOnly=None; SameSite=None; version=0
+Set-Cookie3: centralauth_Token=3e5f38ebbe352c3d2082377551c0913e; path="/"; domain="www.wikidata.org"; path_spec; secure; expires="2025-03-06 17:42:41Z"; HttpOnly=None; SameSite=None; version=0
+Set-Cookie3: centralauth_User=FinnH123; path="/"; domain="www.wikidata.org"; path_spec; secure; expires="2025-03-06 17:42:41Z"; HttpOnly=None; SameSite=None; version=0
+Set-Cookie3: cpPosIndex="2%401709746960%2398c9129fe448a7c8e086cc13d939b195"; path="/"; domain="www.wikidata.org"; path_spec; secure; expires="2024-03-06 17:42:51Z"; HttpOnly=None; version=0
+Set-Cookie3: loginnotify_prevlogins="2024-1hgr7li-3zr57pejftrgc7yr5yqyh30zam1iqqe"; path="/"; domain="www.wikidata.org"; path_spec; secure; expires="2024-09-02 17:42:41Z"; HttpOnly=None; version=0
+Set-Cookie3: wikidatawikiSession=kbcaah92ld6apgpkhsv13vqt5ukqrkar; path="/"; domain="www.wikidata.org"; path_spec; secure; discard; HttpOnly=None; SameSite=None; version=0
+Set-Cookie3: wikidatawikiUserID=6662175; path="/"; domain="www.wikidata.org"; path_spec; secure; expires="2025-03-06 17:42:41Z"; HttpOnly=None; SameSite=None; version=0
+Set-Cookie3: wikidatawikiUserName=FinnH123; path="/"; domain="www.wikidata.org"; path_spec; secure; expires="2025-03-06 17:42:41Z"; HttpOnly=None; SameSite=None; version=0
